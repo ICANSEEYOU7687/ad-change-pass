@@ -12,8 +12,8 @@ RUN a2enmod rewrite
 
 ADD https://gitlab.com/canbican/ad-change-pass/-/archive/master/ad-change-pass-master.zip /
 RUN unzip /ad-change-pass-master.zip -d /var/www/html
-RUN mv /var/www/html/self-service-password-master/* /var/www/html
-RUN rm -rf /var/www/html/self-service-password-master
+RUN mv /var/www/html/ad-change-pass-master/* /var/www/html
+RUN rm -rf /var/www/html/ad-change-pass-master
 RUN chown -R www-data:www-data /var/www/html
 
 VOLUME /var/www/html/conf
