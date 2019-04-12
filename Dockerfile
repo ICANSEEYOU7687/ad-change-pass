@@ -16,7 +16,6 @@ RUN mv /var/www/html/ad-change-pass-master/* /var/www/html
 RUN rm -rf /var/www/html/ad-change-pass-master
 RUN chown -R www-data:www-data /var/www/html
 
-VOLUME /var/www/html/
 
 ADD http://htmlpurifier.org/releases/htmlpurifier-4.10.0.zip /
 RUN unzip /htmlpurifier-4.10.0.zip -d /
@@ -25,3 +24,5 @@ RUN rm -rf /htmlpurifier-4.10.0
 RUN rm -rf /htmlpurifier-4.10.0.zip
 
 RUN chown -R www-data:www-data /var/www/html
+
+VOLUME /var/www/html/
