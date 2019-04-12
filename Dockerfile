@@ -9,7 +9,7 @@ RUN set -x \
         && apt-get purge -y --auto-remove libldap2-dev
 RUN a2enmod rewrite
 
-VOLUME /var/www/html/conf
+VOLUME /var/www/html/
 
 ADD https://gitlab.com/canbican/ad-change-pass/-/archive/master/ad-change-pass-master.zip /
 RUN unzip /ad-change-pass-master.zip -d /var/www/html
@@ -24,6 +24,3 @@ RUN rm -rf /htmlpurifier-4.10.0
 RUN rm -rf /htmlpurifier-4.10.0.zip
 
 RUN chown -R www-data:www-data /var/www/html
-
-RUN touch /var/www/html/conf/test2.php
-
